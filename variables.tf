@@ -46,10 +46,8 @@ variable "rds_security_group_id" {
   description = "Security group id the lambda can join for rds access. (allows ingress from self)"
   default     = ""
 }
-/* Not yet available 
-variable "additional_kms_role_arn" {
+variable "additional_kms_role_arns" {
   type = "list"
-  default = [""]
+  default = []
   description = "If you want add another role of another resource to access to the kms key used to encrypt the secret"
 }
-*/
