@@ -199,7 +199,7 @@ resource "aws_kms_key" "secret" {
       "Effect": "Allow",
       "Principal": {
         "AWS": [
-          "${aws_iam_role.lambda_rotation.arn}"
+          "${join("\",\"", concat([aws_iam_role.lambda_rotation.arn], compact(var.additional_kms_role_arns)))}"
         ]
       },
       "Action": [
