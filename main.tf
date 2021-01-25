@@ -245,8 +245,8 @@ resource "aws_kms_alias" "secret" {
 # secrets manager operations idempotent across multiple runs
 # instead of failing when the secret already exists, but was deleted
 resource "random_string" "namefix" {
-  length = 3
-  upper = true
+  length  = 3
+  upper   = true
   special = false
 }
 

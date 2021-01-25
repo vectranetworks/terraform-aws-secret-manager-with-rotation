@@ -47,7 +47,7 @@ variable "rds_security_group_id" {
   default     = ""
 }
 variable "additional_kms_role_arns" {
-  type = "list"
-  default = []
+  type        = list(string)
+  default     = []
   description = "If you want add another role of another resource to access to the kms key used to encrypt the secret"
 }
